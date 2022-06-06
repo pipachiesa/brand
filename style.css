@@ -64,3 +64,52 @@
     .buzo-tres { grid-area: 1 / 1 / 2 / 2; }
     .buzo-cuatro { grid-area: 1 / 2 / 2 / 3; }
     .buzo-cinco { grid-area: 1 / 3 / 2 / 4; }
+
+/* Media Queris */
+
+@media screen and (max-width: 992px) {
+    .video {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hoodies-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hoodie-dos, .hoodie-tres {
+        margin-top: 15px;
+    }
+        
+    .img-redes {
+        margin-left: 112px;
+        margin-bottom: 20px;
+    }
+
+    .pay {
+            display: flex;
+            margin-left: 112px;
+        }
+
+    .metodos {
+            font-size: medium;
+            display: flex;
+            justify-content: center;
+        }
+
+        .brand {
+            display: none;
+        }
+
+        .img
+
+}
+
+@media screen and (min-width: 992px) {
+    .metodos {
+        display: none;
+    }
+
+}
