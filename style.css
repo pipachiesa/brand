@@ -76,7 +76,7 @@
     .hoodies-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
     }
 
     .hoodie-dos, .hoodie-tres {
@@ -84,13 +84,13 @@
     }
         
     .img-redes {
-        margin-left: 112px;
-        margin-bottom: 20px;
+        
     }
 
     .pay {
             display: flex;
-            margin-left: 112px;
+            align-items: flex-end;
+            justify-content: center;
         }
 
     .metodos {
@@ -103,7 +103,7 @@
             display: none;
         }
 
-        .img
+        
 
 }
 
