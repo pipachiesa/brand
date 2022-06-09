@@ -1,0 +1,47 @@
+@import '../base/listas';
+@import '../base/variables';
+
+.hoodies-container {
+    display: grid;
+    grid-template-columns: repeat(3, $medidas-fr);
+    grid-template-rows: $medidas-fr;
+    grid-column-gap: nth($medidas-px, 4);
+    grid-row-gap: nth($medidas-px, 5);
+    }
+    
+.hoodie-uno { grid-area: 1 / 1 / 2 / 2; }
+.hoodie-dos { grid-area: 1 / 2 / 2 / 3; }
+.hoodie-tres { grid-area: 1 / 3 / 2 / 4; }
+
+.size {
+    width: nth($medidas-rem, 1);
+}
+
+.animation:hover {
+    transform: scale($animation-size);
+    transition: all $time;
+}
+
+.buzos-container {
+    display: grid;
+    grid-template-columns: repeat(2, $medidas-fr);
+    grid-template-rows: $medidas-fr;
+    grid-column-gap: nth($medidas-px, 4);
+    grid-row-gap: nth($medidas-px, 5);
+    margin-top: nth($medidas-px, 2);
+    }
+    
+.buzo-uno { grid-area: 1 / 1 / 2 / 2; }
+.buzo-dos { grid-area: 1 / 2 / 2 / 3; }
+
+.buzo-subcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, $medidas-fr);
+    grid-template-rows: $medidas-fr;
+    grid-column-gap: nth($medidas-px, 4);
+    grid-row-gap: nth($medidas-px, 5);
+    }
+    
+    .buzo-tres { grid-area: 1 / 1 / 2 / 2; }
+    .buzo-cuatro { grid-area: 1 / 2 / 2 / 3; }
+    .buzo-cinco { grid-area: 1 / 3 / 2 / 4; }

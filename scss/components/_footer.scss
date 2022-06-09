@@ -1,0 +1,24 @@
+@import '../base/listas';
+@import '../base/variables';
+
+.link a {
+        text-decoration: none;
+        color: $blanco;
+    }
+    
+.list-dec {
+        list-style-type: none;
+    }
+    
+.img-redes {
+        display: flex;
+        justify-content: space-around;
+        font-size: nth($medidas-rem, 2);
+        min-width: $medida-porciento;
+    }
+
+.pay {
+        color: $blanco;
+        min-width: $medida-porciento;
+        font-size: nth($medidas-rem, 2);
+    }
