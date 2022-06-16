@@ -93,6 +93,9 @@
 .buzo-cinco {
   grid-area: 1 / 3 / 2 / 4; }
 
+.exclaimer {
+  display: none; }
+
 .link a {
   text-decoration: none;
   color: white; }
