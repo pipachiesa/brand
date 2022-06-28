@@ -40,6 +40,15 @@
   .no-desktop {
     display: none; } }
 
+body {
+  background-color: black; }
+
+h1 {
+  color: white; }
+
+.buttons {
+  color: white; }
+
 .hoodies-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

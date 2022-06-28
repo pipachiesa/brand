@@ -1,6 +1,17 @@
 @import '../base/listas';
 @import '../base/variables';
 
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+h1 {
+    color: white;
+}
+
+.buttons {
+    color: white;
+}
 .hoodies-container {
     display: grid;
     grid-template-columns: repeat(3, $medidas-fr);
