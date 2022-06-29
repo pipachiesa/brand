@@ -32,7 +32,15 @@
   .opacity {
     opacity: 0.7; }
   .size {
-    width: 20rem; } }
+    width: 20rem; }
+  .seguridad {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .truck, .credit-card {
+    margin-bottom: 100px; }
+  .shield {
+    margin-bottom: 50px; } }
 
 @media screen and (min-width: 992px) {
   .metodos {
@@ -40,14 +48,19 @@
   .no-desktop {
     display: none; } }
 
-body {
-  background-color: black; }
+.copy {
+  font-size: 0.45rem; }
 
-h1 {
-  color: white; }
+.iconos {
+  font-size: 2rem; }
 
-.buttons {
-  color: white; }
+.navbar {
+  margin-bottom: 10px;
+  border-bottom: 1px solid black; }
+
+.sec-border {
+  border-top: 1px solid black;
+  margin-top: 100px; }
 
 .hoodies-container {
   display: grid;

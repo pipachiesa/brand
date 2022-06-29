@@ -60,6 +60,20 @@
             width: nth($medidas-rem, 1);
         }
 
+        .seguridad {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .truck, .credit-card {
+            margin-bottom: nth($medidas-px, 8);
+        }
+        
+        .shield{
+            margin-bottom: nth($medidas-px, 9);
+        }
+
 }
 
 @media screen and (min-width: 992px) {

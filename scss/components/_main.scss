@@ -1,17 +1,25 @@
 @import '../base/listas';
 @import '../base/variables';
 
-body {
-    background-color: rgb(0, 0, 0);
+.copy {
+    font-size: nth($medidas-rem, 3);
 }
 
-h1 {
-    color: white;
+.iconos {
+    font-size: nth($medidas-rem, 2);
 }
 
-.buttons {
-    color: white;
+.navbar {
+    margin-bottom: nth($medidas-px, 6);
+    border-bottom: nth($medidas-px, 7) solid black;
 }
+
+.sec-border {
+    border-top: nth($medidas-px, 7) solid black;
+    margin-top: nth($medidas-px, 8);
+}
+
+
 .hoodies-container {
     display: grid;
     grid-template-columns: repeat(3, $medidas-fr);

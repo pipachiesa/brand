@@ -10,10 +10,10 @@
 </head>
 <body>
 <div class="container">
-<header class="row">
+<header class="row bg-white">
 <h1 class="">BRAND</h1>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-black">
+<nav class="navbar navbar-expand-lg bg-white">
 <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -21,24 +21,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-            <a class="nav-link buttons" href="./index.html">Inicio</a>
-            </li>
-        <li class="nav-item">
-        <a class="nav-link buttons" href="./hoodies.html">Hoodies</a>
+        <a class="nav-link active " aria-current="page" href="./index.html">Inicio</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link buttons" href="./nosotros.html">Nosotros</a>
+        <a class="nav-link" href="./hoodies.html">Hoodies</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link buttons" href="./faq.html">F.A.Q</a>
+            <a class="nav-link" href="./nosotros.html">Nosotros</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link buttons" href="./contacto.html">Contacto</a>
+            <a class="nav-link" href="./faq.html">F.A.Q</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./contacto.html">Contacto</a>
         </li>
     </ul>
     <form class="d-flex" role="search">
-        <input class="form-control me-2 bg-black" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-white" type="submit">Search</button>
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-dark" type="submit">Search</button>
     </form>
     </div>
 </nav>
@@ -63,17 +63,57 @@
             <img class="size rounded float-start float-end" src="./multimedia/imagenes/buzo-tres.jpeg" alt="Hoodie3">
         </div>
     </section>
-<!-- Galery End -->
 </main>
 
+<!-- Galery End -->
+
+<!-- Seguridad -->
+<section class="sec-border p-5">
+    <div class="row p-5 seguridad">
+
+        <div class="col-4 truck">
+            <i class="d-flex justify-content-center iconos fa-solid fa-truck-fast text-center"></i>      
+            <h2 class="lead text-center fs-3">
+            <strong>Envios Rapidos</strong> 
+            </h2>
+            <h2 class="lead text-center pb-3">
+                Entre 1 y 2 semanas
+            </h2>            
+        </div>
+
+        <div class="col-4 credit-card">
+            <i class="fa-solid fa-credit-card d-flex justify-content-center iconos"></i>
+            <h2 class="lead text-center fs-3">
+            <strong>Hasta 12 cuotas</strong> 
+            </h2>
+            <h2 class="lead text-center">
+                con todos los medios de pago
+            </h2> 
+        </div>
+
+        <div class="col-4 shield">
+            <i class="fa-solid fa-shield-heart d-flex justify-content-center iconos"></i>
+            <h2 class="lead text-center fs-3">
+            <strong>Compra segura</strong> 
+            </h2>
+            <h2 class="lead text-center">
+                Protegemos tus datos
+            </h2>
+        </div>
+    </div>
+</section>
+
 </div>
+
+<!-- Seguridad End -->
+
 <!-- Footer -->
-<footer class="end text-bg-black p-3">
+<footer class="end text-bg-secondary p-3">
 
     <p class="metodos">Redes Sociales</p>
 
     <section class="row d-flex justify-content-center">
-        <div class="d-flex justify-content-around link img-redes col-5">
+        <div class="d-flex justify-content-around link img-redes align-items-center col-5">
             <div class="instagram">
                 <a href="https://www.instagram.com/">
                     <i class="fa-brands fa-instagram"></i>
@@ -99,11 +139,12 @@
 
         <div class="text-center brand fs-2 link col-2">
                 <a href="./index.html">BRAND</a>
+                <p class="copy">© COPYRIGHT BRAND - 2022. TODOS LOS DERECHOS RESERVADO</p>
         </div>
 
         <p class="metodos">Metodos de Pago</p>
 
-        <div class="pay d-flex justify-content-around col-5">
+        <div class="pay d-flex justify-content-around align-items-center col-5">
             <div>
                 <i class="fa-brands fa-cc-visa tarjetas"></i>
             </div>
