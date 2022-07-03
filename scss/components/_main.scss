@@ -93,3 +93,13 @@
 .nav-link:hover::after {
     transform: scaleX(1);
 }
+
+.fa-brands:hover {
+    transition: none;
+    color: white;
+}
+
+.brand:hover {
+    transition: none;
+    color: white;
+}
