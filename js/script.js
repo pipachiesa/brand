@@ -63,11 +63,10 @@ for(let i = 0 ; i < cantidadcompras ; i++) {
         alert("No disponemos de ese producto")
     }
 }
+alert("El precio total es de $" + preciototal)
 
 let ahorro = prompt("Introduzca un cupon de descuento")
 
 if(ahorro === "CODER") {
 alert("El precio total es de $" + descuento(preciototal))
 }
-
-alert("El precio total es de $" + preciototal)
