@@ -10,11 +10,22 @@ const producto3 = new Producto('Hoodie Three', 35, 10)
 const producto4 = new Producto('Hoodie Four', 60, 25)
 const producto5 = new Producto('Hoodie Five', 45, 15)
 
+let listaProductos = [producto1, producto2, producto3, producto4, producto5]
+
 let preciototal = 0
 
 let cupon = "CODER"
 
-let cantidadcompras = prompt("Cuantos productos desea comprar? \n- Hoodie One\n- Hoodie Two\n- Hoodie Three\n- Hoodie Four\n- Hoodie Five")
+let nombresProductos = []
+
+function listarproductos(){
+    for(const producto of listaProductos) {
+        nombresProductos.push(producto.nombre)
+    }
+    }
+    listarproductos()
+
+let cantidadcompras = prompt("Cuantos productos desea comprar? \n- " + nombresProductos.join('\n- '))
 
 if(cantidadcompras > 5) {
     alert("Solo disponemos de 5 productos diferentes")
@@ -41,7 +52,7 @@ function calculostock(cantidad, producto) {
 
 for(let i = 0 ; i < cantidadcompras ; i++) {
 
-    let buzo = prompt("Que producto/s desea comprar? \n- Hoodie One\n- Hoodie Two\n- Hoodie Three\n- Hoodie Four\n- Hoodie Five")
+    let buzo = prompt("Que producto/s desea comprar? \n- " + nombresProductos.join('\n- '))
     let cantidad = prompt("Cuantos productos desea comprar?")
 
     if(buzo === producto1.nombre) {
