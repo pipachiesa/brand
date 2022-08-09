@@ -49,17 +49,26 @@
 <!-- Filtros y Titulo -->
 <section>
     <h2 class="text-center mt-5">Productos</h2>
-
-<div class="dropdown">
-    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        Filtros
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a id="menor" class="dropdown-item" href="#">Precio: De mayor a menor</a></li>
-        <li><a id="mayor" class="dropdown-item" href="#">Precio: De menor a mayor</a></li>
+    <div class="d-flex justify-content-between">
+        <div class="align-items-end">
+            <a type="" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <i class="fa-solid fa-cart-shopping iconoCarrito"></i>
+            </a>
+        </div>
+    
         
-    </ul>
-    </div>    
+    
+        <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Filtros
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a id="menor" class="dropdown-item" href="#">Precio: De mayor a menor</a></li>
+                <li><a id="mayor" class="dropdown-item" href="#">Precio: De menor a mayor</a></li>   
+            </ul>
+        </div>
+    </div>
+        
 </section>
 <!-- Filtros y Titulo End -->
 
@@ -106,6 +115,27 @@
 </div>
 
 <!-- Seguridad End -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Carrito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <div id="carrito"></div>
+    </div>
+    <div id="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- Modal End -->
 
 <!-- Footer -->
 <footer class="end text-bg-secondary p-3">

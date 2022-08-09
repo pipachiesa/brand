@@ -1,0 +1,7 @@
+[
+    {"id": 1, "nombre": "Pink Hoodie One", "precio": 50, "stock": 20, "img": "./multimedia/imagenes/hoodie 2.jpg"},
+    {"id": 2, "nombre": "Green Hoodie Two", "precio": 20, "stock": 5, "img": "./multimedia/imagenes/hoodie 3.jpeg"}, 
+    {"id": 3, "nombre": "Orange Hoodie Three", "precio": 35, "stock": 10, "img": "./multimedia/imagenes/151-fbbfb36c77118f8ca516387096049002-480-0.jpg"}, 
+    {"id": 4, "nombre": "White Hoodie Four", "precio": 60, "stock": 25, "img": "./multimedia/imagenes/buzo-311-eb31f9107f1bdb8fef16433181181071-480-0.jpg"}, 
+    { "id": 5, "nombre": "White Hoodie Five", "precio": 45, "stock": 15, "img": "./multimedia/imagenes/buzo-1011-7917b6b641fb4db03616433168665966-640-0.jpg"}
+]
