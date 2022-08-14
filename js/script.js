@@ -100,6 +100,16 @@ const agregarAlCarrito = (index) => {
         actualizarStorage(carrito);
         imprimirCarrito();
     }
+
+    Toastify({
+        text: `${listaProductos[index].name} ha sido agregado al carrito.`,
+        className: "info",
+        style: {
+        background: "black"
+        },
+        gravity: "bottom",
+        position: "right", 
+    }).showToast();
 }
 
 const finalizarCompra = () => {
@@ -197,4 +207,3 @@ vaciarCarrito = () => {
 
 visualizarProductos()
 imprimirCarrito(); 
-
