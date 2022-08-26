@@ -18,17 +18,17 @@ function Producto(id, name, price, stock, image) {
     this.image = image;
 }
 
-let listaProductos = [
-    new Producto(1, 'Pink Hoodie One', 50, 20, "./multimedia/imagenes/hoodie 2.jpg"), 
-    new Producto(2, 'Green Hoodie Two', 20, 5, "./multimedia/imagenes/hoodie 3.jpeg"), 
-    new Producto(3, 'Orange Hoodie Three', 35, 10, "./multimedia/imagenes/151-fbbfb36c77118f8ca516387096049002-480-0.jpg"), 
-    new Producto(4, 'White Hoodie Four', 60, 25, "./multimedia/imagenes/buzo-311-eb31f9107f1bdb8fef16433181181071-480-0.jpg"), 
-    new Producto(5, 'White Hoodie Five', 45, 15, "./multimedia/imagenes/buzo-1011-7917b6b641fb4db03616433168665966-640-0.jpg")
-]
+let listaProductos = []
 
 let nombresProductos = listaProductos.map((product) => product.nombre)
 
 let idProductos = listaProductos.map((product) => product.id)
+
+const getProducts = async () => {
+    const res = await fetch('./js/data.json');
+    listaProductos = await res.json() 
+    visualizarProductos(listaProductos);
+}
 
 const carritoDeCompras = () => {
     let iconCarrito = document.createElement('div')
@@ -46,10 +46,10 @@ const visualizarProductos = () => {
     `<main class="mt-5 mb-5 shop-container">
         <section class="shop d-flex justify-content-around">
             <div class="card animation" style="width: 18rem;">
-                <img src="${product.image}" class="card-img-top" alt="Hoodies">
+                <img src="${product.img}" class="card-img-top" alt="Hoodies">
                     <div class="card-body">
-                        <h5 class="card-title">${product.name}</h5>
-                        <button href="#" class="btn btn-dark" onClick="agregarAlCarrito(${index})">$${product.price}</button>
+                        <h5 class="card-title">${product.nombre}</h5>
+                        <button href="#" class="btn btn-dark" onClick="agregarAlCarrito(${index})">$${product.precio}</button>
                     </div>
             </div>
         </section>
@@ -62,12 +62,12 @@ const visualizarProductos = () => {
 }
 
 mayor.onclick = () =>{
-    listaProductos = sortArray(listaProductos, 'price')
+    listaProductos = sortArray(listaProductos, 'precio')
     visualizarProductos()
 }
 
 menor.onclick = () =>{
-    listaProductos = sortArray(listaProductos, 'price', 'desc')
+    listaProductos = sortArray(listaProductos, 'precio', 'desc')
     visualizarProductos()
 }
 
@@ -102,7 +102,7 @@ const agregarAlCarrito = (index) => {
     }
 
     Toastify({
-        text: `${listaProductos[index].name} ha sido agregado al carrito.`,
+        text: `${listaProductos[index].nombre} ha sido agregado al carrito.`,
         className: "info",
         style: {
         background: "black"
@@ -132,7 +132,7 @@ const imprimirCarrito = () => {
     
     if (carrito.length > 0) {
         carrito.forEach((product, index) => {
-            total = total + product.price * product.cantidad;
+            total = total + product.precio * product.cantidad;
             const listaCarrito = document.createElement("div");
             listaCarrito.className = "text-center";
             listaCarrito.innerHTML = 
@@ -140,15 +140,15 @@ const imprimirCarrito = () => {
                 <table>
                     <td>
                         <div class=" d-flex align-items-center">
-                            <div class="px-3 pb-3"><a><img src="${product.image}" alt="${product.name}" width="48"></a></div>
+                            <div class="px-3 pb-3"><a><img src="${product.img}" alt="${product.nombre}" width="48"></a></div>
                             <div class="d-sm-flex"></div>
-                            <div class="align-middle px-sm-5"><h2 class="lead my-1">${product.name}</h2></div>
+                            <div class="align-middle px-sm-5"><h2 class="lead my-1">${product.nombre}</h2></div>
                             <div class="align-middle">Cant. ${product.cantidad}</div>
                         </div>
                     </td>
                     <td>
                         <div class="d-flex align-items-center">
-                            <div class="px-4"><h2 class="lead my-1">$${product.price}</h2></div>
+                            <div class="px-4"><h2 class="lead my-1">$${product.precio}</h2></div>
                             <div class="">
                                 <span>
                                     <div class="p-2"> <a onClick="removeProduct(${index})"><i class="fa-solid fa-trash-can"></i></a></div>
@@ -206,4 +206,7 @@ vaciarCarrito = () => {
 };
 
 visualizarProductos()
-imprimirCarrito(); 
+imprimirCarrito()
+getProducts()
+
+
