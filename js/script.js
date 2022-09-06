@@ -205,6 +205,8 @@ vaciarCarrito = () => {
     imprimirCarrito()
 };
 
+console.log(mayor)
+
 visualizarProductos()
 imprimirCarrito()
 getProducts()
