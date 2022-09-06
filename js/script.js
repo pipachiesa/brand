@@ -1,7 +1,5 @@
 let preciototal = 0
 
-let cupon = "CODER"
-
 const tienda = document.getElementById('tienda')
 
 const carritoCompra = document.getElementById('carrito')
@@ -30,11 +28,20 @@ const getProducts = async () => {
     visualizarProductos(listaProductos);
 }
 
-const carritoDeCompras = () => {
-    let iconCarrito = document.createElement('div')
-    iconCarrito.innerHTML = 
+const badgeCarrito = () => {
+    const iconoCarrito = document.getElementById("iconoCarrito");
+    const badge  = 
+    `<button type="button" class="btn btn-dark position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop">                      
+        <a class="text-decoration-none" target="_blank">
+            <i class="fa-solid fa-cart-shopping iconocarrito"></i>
+        </a> 
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger zIndex">
+            ${calcularCantProductos()}
+            <span class="visually-hidden">unread messages</span>
+        </span>
+    </button>`
 
-    carrito.appendChild(carrito)
+    iconoCarrito.innerHTML = badge
 }
 
 const visualizarProductos = () => {
@@ -90,15 +97,17 @@ const agregarAlCarrito = (index) => {
 
     if (indiceProducto > -1) {
         carrito[indiceProducto].cantidad += 1
-        actualizarStorage(carrito);
-        imprimirCarrito();
+        actualizarStorage(carrito)
+        imprimirCarrito()
+        badgeCarrito()
     } 
     else {
         const agregarProducto = listaProductos[index];
         agregarProducto.cantidad = 1;
-        carrito.push(agregarProducto);
-        actualizarStorage(carrito);
-        imprimirCarrito();
+        carrito.push(agregarProducto)
+        actualizarStorage(carrito)
+        imprimirCarrito()
+        badgeCarrito()
     }
 
     Toastify({
@@ -151,7 +160,7 @@ const imprimirCarrito = () => {
                             <div class="px-4"><h2 class="lead my-1">$${product.precio}</h2></div>
                             <div class="">
                                 <span>
-                                    <div class="p-2"> <a onClick="removeProduct(${index})"><i class="fa-solid fa-trash-can"></i></a></div>
+                                    <div class="p-2"> <a onClick="removerProduct(${index})"><i class="fa-solid fa-trash-can"></i></a></div>
                                 </span>
                             </div>
                         </div>
@@ -186,10 +195,11 @@ const imprimirTotal = document.createElement("div");
 };
 
 
-const removeProduct = (index) => {
+const removerProduct = (index) => {
     carrito.splice (index, 1);
-    actualizarStorage(carrito);
-    imprimirCarrito();
+    actualizarStorage(carrito)
+    imprimirCarrito()
+    badgeCarrito()
 }
 
 const actualizarStorage = (carrito) => {
@@ -203,12 +213,13 @@ const calcularCantProductos = () => {
 vaciarCarrito = () => {
     localStorage.removeItem("carrito");
     imprimirCarrito()
-};
+}
 
-console.log(mayor)
+console.log(badgeCarrito)
 
 visualizarProductos()
 imprimirCarrito()
 getProducts()
+badgeCarrito()
 
 
